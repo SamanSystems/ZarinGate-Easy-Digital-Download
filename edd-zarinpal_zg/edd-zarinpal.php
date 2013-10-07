@@ -10,7 +10,7 @@
 **/
 @session_start();
 
-function zp_zg_edd_rial ($formatted, $currency, $price) {
+function zp_edd_rial ($formatted, $currency, $price) {
 	return $price . 'ریال';
 }
 add_filter( 'edd_rial_currency_filter_after', 'edd_rial', 10, 3 );
@@ -59,7 +59,7 @@ function zp_zg_process_payment ($purchase_data) {
 		array(
 					'MerchantID' 	=> $api ,
 					'Amount' 		=> $price ,
-					'Description' 	=> urlencode($desc) ,
+					'Description' 	=> $desc ,
 					'Email' 		=> $payment_data['user_email'] ,
 					'Mobile' 		=> '' ,
 					'CallbackURL' 	=> urldecode($return)
