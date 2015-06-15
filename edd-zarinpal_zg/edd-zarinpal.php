@@ -9,12 +9,12 @@
 	Author URI: http://haftir.ir
 **/
 @session_start();
-
+/*
 function zp_edd_rial ($formatted, $currency, $price) {
 	return $price . 'ریال';
 }
 add_filter( 'edd_rial_currency_filter_after', 'edd_rial', 10, 3 );
-
+*/
 function zp_zg_add_gateway ($gateways) {
 	$gateways['zarinpal'] = array('admin_label' => 'زرین&zwnj;پال', 'checkout_label' => 'پرداخت آنلاین با زرین&zwnj;پال');
 	return $gateways;
